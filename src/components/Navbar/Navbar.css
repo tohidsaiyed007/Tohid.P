@@ -1,0 +1,162 @@
+.navbar {
+  width: 100%;
+  height: 82px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(15px);
+
+  border-bottom: 1px solid #eeeeF4;
+}
+
+.nav-container {
+  width: 90%;
+  max-width: 1250px;
+  height: 100%;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  color: #172033;
+  font-size: 29px;
+  font-weight: 900;
+  letter-spacing: -1.5px;
+}
+
+.nav-logo span {
+  color: #7547e8;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.nav-links a {
+  color: #586174;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #7547e8;
+}
+
+.nav-contact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 13px 21px;
+  border-radius: 9px;
+
+  background: #7547e8;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition: 0.3s;
+}
+
+.nav-contact:hover {
+  background: #6034ce;
+  transform: translateY(-2px);
+  box-shadow: 0 7px 20px rgba(117, 71, 232, 0.2);
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #172033;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .nav-links {
+    gap: 19px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .nav-contact {
+    padding: 11px 15px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .navbar {
+    height: 72px;
+  }
+
+  .nav-logo {
+    font-size: 26px;
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1002;
+  }
+
+  .nav-contact {
+    display: none;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 72px;
+    left: 0;
+
+    width: 100%;
+    padding: 25px 5%;
+
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeF4;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.05);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+
+    transition: 0.3s ease;
+  }
+
+  .nav-links.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 15px;
+    border-bottom: 1px solid #f1f1f5;
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+}

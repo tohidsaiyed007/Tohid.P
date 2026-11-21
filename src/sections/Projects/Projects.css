@@ -1,0 +1,288 @@
+.projects-section {
+  padding: 90px 5%;
+  background: #f8f7fc;
+}
+
+.projects-container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* Heading */
+.projects-heading {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 55px;
+}
+
+.projects-label {
+  display: inline-block;
+  color: #7652e8;
+  background: #eee9ff;
+  padding: 9px 18px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.projects-heading h2 {
+  color: #172033;
+  font-size: 42px;
+  font-weight: 800;
+  margin: 18px 0 12px;
+}
+
+.projects-heading h2 span {
+  color: #7652e8;
+}
+
+.projects-heading p {
+  color: #737b8c;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Three Cards in One Row */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+/* Project Card */
+.project-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: #ffffff;
+  border: 1px solid #e6e1f4;
+  border-radius: 17px;
+  padding: 24px 21px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(30, 25, 60, 0.05);
+  transition: 0.3s ease;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #7652e8, #b49cff);
+}
+
+.project-card:hover {
+  transform: translateY(-7px);
+  border-color: #7652e8;
+  box-shadow: 0 15px 35px rgba(118, 82, 232, 0.13);
+}
+
+/* Card Top */
+.project-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.project-number {
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #7652e8, #9a7bf1);
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.project-type {
+  background: #f0ecff;
+  color: #7652e8;
+  padding: 8px 10px;
+  border-radius: 30px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+/* Content */
+.project-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.project-subtitle {
+  color: #7652e8;
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.project-content h3 {
+  color: #172033;
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.4;
+  margin-bottom: 13px;
+  overflow-wrap: anywhere;
+}
+
+.project-card:hover .project-content h3 {
+  color: #7652e8;
+}
+
+.project-content > p {
+  color: #737b8c;
+  font-size: 12px;
+  line-height: 1.8;
+  margin-bottom: 22px;
+}
+
+/* Technologies */
+.project-tech-heading {
+  color: #172033;
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 25px;
+}
+
+.project-tech span {
+  color: #6843d5;
+  background: #f3f0ff;
+  border: 1px solid #e5dcff;
+  padding: 7px 9px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* Buttons */
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.project-live-btn,
+.project-github-btn {
+  flex: 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  padding: 11px 8px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 800;
+  transition: 0.3s;
+}
+
+.project-live-btn {
+  color: #ffffff;
+  background: #7652e8;
+  border: 1px solid #7652e8;
+}
+
+.project-live-btn:hover {
+  background: #603bd0;
+}
+
+.project-github-btn {
+  color: #7652e8;
+  background: #ffffff;
+  border: 1px solid #dcd2ff;
+}
+
+.project-github-btn:hover {
+  color: #ffffff;
+  background: #172033;
+  border-color: #172033;
+}
+
+/* Bottom */
+.projects-bottom {
+  text-align: center;
+  margin-top: 45px;
+}
+
+.projects-bottom p {
+  color: #737b8c;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.projects-bottom a {
+  color: #7652e8;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/* Laptop */
+@media (max-width: 1100px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Tablet */
+@media (max-width: 700px) {
+  .projects-section {
+    padding: 70px 5%;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    padding: 25px;
+  }
+
+  .project-content h3 {
+    font-size: 22px;
+  }
+
+  .project-content > p {
+    font-size: 13px;
+  }
+
+  .project-live-btn,
+  .project-github-btn {
+    font-size: 12px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 380px) {
+  .projects-heading h2 {
+    font-size: 29px;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+
+  .project-type {
+    font-size: 9px;
+  }
+}
